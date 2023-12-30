@@ -1,14 +1,14 @@
 import { ReactNode } from "react"
 
 
-type sectionProps = {
-    title?:string,
+type SectionProps = {
+    title?:string,    //the ttitle is optional as shown by sign - ?. If its not provided then we use the defaul title given in props
     children:ReactNode
 }
 
 
 
-const Section = ({title, children}) => {
+const Section = ({title = "My default title", children}: SectionProps) => {
   return (
     <section>
         <h1>{title}</h1>
