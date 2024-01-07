@@ -4,6 +4,7 @@ import Counter from "./components/Counter"
 import List from "./components/List"
 import Reducer from "./components/Reducer"
 import { useState } from "react"
+import Effect from "./components/Effect"
 function App() {
 
   const [count, setCount] = useState <number>(2)
@@ -18,6 +19,7 @@ function App() {
      <Counter setCount ={setCount}>Count is: {count}</Counter>
      <List items ={["coffee", "taco", "rice"]} render={(item:string) => <span>{item}</span>}/>
      <Reducer/>
+     <Effect/>
     </>
   )
 }

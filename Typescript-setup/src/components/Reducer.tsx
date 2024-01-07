@@ -17,11 +17,18 @@ interface Action {
 function reducer (state:State, action:Action) {
     switch(action.type){
         case 'INCREMENT':{
-            return {...state, count : state.count +1 }
+            const newCount = state.count + 1;
+            const hasError = state.count >= 10;
+            return {...state, count : hasError ? state.count : newCount,
+                error:hasError ? `Cannot increment above 10`: null,
+            }
         }
         case 'DECREMENT':{
-            
-            return {...state , count : state.count -1}
+            const newCount = state.count -1;
+            const hasError = state.count <= 0;
+            return {...state , count : hasError ? state.count : newCount, 
+                error : hasError ? `Cannot decrement below zero` : null,
+            }
         }
         default:
             return state;
@@ -36,6 +43,7 @@ const Reducer = () => {
         <button className='mb-2 bg-green-500' onClick={()=>dispatch({type:"INCREMENT"} as Action)}>INCREMENT</button>
         {state.error && <div className='mb-2 text-red-600'> {state.error}</div>}
         <button className='mb-2 bg-blue-600' onClick={()=>dispatch({type:"DECREMENT"} as Action)}>DECREMENT</button>
+       
     </div> 
   )
 }
