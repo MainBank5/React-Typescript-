@@ -2,7 +2,7 @@ import Heading from "./components/Heading"
 import Section from "./components/Section"
 import Counter from "./components/Counter"
 import List from "./components/List"
-
+import Reducer from "./components/Reducer"
 import { useState } from "react"
 function App() {
 
@@ -17,6 +17,7 @@ function App() {
 
      <Counter setCount ={setCount}>Count is: {count}</Counter>
      <List items ={["coffee", "taco", "rice"]} render={(item:string) => <span>{item}</span>}/>
+     <Reducer/>
     </>
   )
 }

@@ -27,6 +27,7 @@ const States = () => {
             <input type="text" onChange={handleChange}/>
             <button onClick={handleClick}>Log in </button>
         </form>
+        
     </div>
   )
 }
