@@ -5,6 +5,7 @@ import List from "./components/List"
 import Reducer from "./components/Reducer"
 import { useState } from "react"
 import Effect from "./components/Effect"
+import Ref from "./components/Ref"
 function App() {
 
   const [count, setCount] = useState <number>(2)
@@ -20,6 +21,7 @@ function App() {
      <List items ={["coffee", "taco", "rice"]} render={(item:string) => <span>{item}</span>}/>
      <Reducer/>
      <Effect/>
+     <Ref/>
     </>
   )
 }
