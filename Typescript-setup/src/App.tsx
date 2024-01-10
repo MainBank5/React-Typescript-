@@ -6,6 +6,8 @@ import Reducer from "./components/Reducer"
 import { useState } from "react"
 import Effect from "./components/Effect"
 import Ref from "./components/Ref"
+import Myreducer from "./components/myReducer"
+
 function App() {
 
   const [count, setCount] = useState <number>(2)
@@ -22,6 +24,8 @@ function App() {
      <Reducer/>
      <Effect/>
      <Ref/>
+
+     <Myreducer/>
     </>
   )
 }
