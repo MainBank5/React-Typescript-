@@ -6,8 +6,9 @@ import Reducer from "./components/Reducer"
 import { useState } from "react"
 import Effect from "./components/Effect"
 import Ref from "./components/Ref"
-import Myreducer from "./components/myReducer"
-
+import Myreducer from "./components/myReducer";
+import Profile from "./components/Profile"
+import Login from "./components/Login";
 function App() {
 
   const [count, setCount] = useState <number>(2)
@@ -26,6 +27,10 @@ function App() {
      <Ref/>
 
      <Myreducer/>
+
+     <Profile/>
+     <Login/>
+     
     </>
   )
 }
